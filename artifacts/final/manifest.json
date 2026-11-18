@@ -1,0 +1,10 @@
+{
+ "model": "xgb",
+ "variant": "default",
+ "feature_version": "v1",
+ "git_hash": "487a424",
+ "created_at": "2026-11-18T15:01:05",
+ "selection_reason": "Highest student_test Top-1 (0.862) of the 5 models and of xgb tuned (0.858); also lowest log loss; Optuna tuning improved CV macro F1 by only 0.0026 and did not improve student_test Top-1, so the untuned model is kept",
+ "source_artifact": "artifacts/models/xgb__default",
+ "source_record": "results/experiments/xgb__default__20261118-144202.json"
+}

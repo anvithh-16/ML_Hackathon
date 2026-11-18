@@ -1,0 +1,41 @@
+# PathSnap shared configuration (contract file: changes need M1 + M4 approval)
+seed: 42
+paths:
+  data_root: "data/raw/Student folder"   # contains train/ and student_test/ (copied unchanged)
+  eval_root: "data/eval"                 # evaluator trips at demo time: data/eval/<trip_id>/...
+  processed: "data/processed"
+  results: "results"
+  artifacts: "artifacts"
+  logs: "logs"
+partitions: [train, student_test]
+exclude_trips_train: ["00000054", "00000033"]   # reference route does not match GPS (see results/eda/anomalies.csv)
+gap_split_s: 30          # start a new HMM segment when consecutive points are > 30 s apart
+gap_split_m: 500         # ... or > 500 m apart
+align:
+  search_m: 150          # route positions considered for a GPS point
+  max_dist_m: 50         # aligned points farther than this get label -1
+  max_skip: 15           # max route positions skipped between consecutive points
+  skip_penalty_m: 2.0    # cost per skipped route position (metres-equivalent)
+candidates:
+  radius_m: 50
+  k_fallback: 3
+  fallback_max_m: 200
+  max_per_obs: 30
+  densify_step_m: 10
+features:
+  version: v1
+  heading_min_disp_m: 2.0
+  dt_cap_s: 600
+  neighbour_dist_cap_m: 100
+training:
+  obs_stride: 3          # use every 3rd observation of each training trip (same for all models)
+  n_splits: 5
+tuning:
+  n_trials: 40
+  obs_stride: 6
+  objective: cv_macro_f1
+api:
+  host: "0.0.0.0"
+  port: 8000
+  max_gps_points_response: 3000
+  final_artifacts: "artifacts/final"
