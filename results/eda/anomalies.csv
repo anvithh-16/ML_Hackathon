@@ -1,7 +1,7 @@
 partition,trip_id,rule,decision
 train,00000002,gap_gt_split,HMM splits into segments; dt capped in features
 train,00000002,route_discontinuity,reference route has jumps; labels by alignment
-train,00000002,gps_far_from_route,reference route unreliable; excluded from training
+train,00000002,gps_far_from_route,kept; far points get label -1 from the alignment (not in exclude_trips_train)
 train,00000004,gap_gt_split,HMM splits into segments; dt capped in features
 train,00000004,low_1hz_fraction,irregular sampling; kept
 train,00000006,gap_gt_split,HMM splits into segments; dt capped in features
@@ -20,7 +20,7 @@ train,00000026,low_1hz_fraction,irregular sampling; kept
 train,00000028,gap_gt_split,HMM splits into segments; dt capped in features
 train,00000032,gap_gt_split,HMM splits into segments; dt capped in features
 train,00000033,route_discontinuity,reference route has jumps; labels by alignment
-train,00000033,gps_far_from_route,reference route unreliable; excluded from training
+train,00000033,gps_far_from_route,reference route unreliable; excluded from training (exclude_trips_train)
 train,00000035,self_loops,kept; no reverse twin assigned
 train,00000037,gap_gt_split,HMM splits into segments; dt capped in features
 train,00000038,self_loops,kept; no reverse twin assigned
@@ -33,7 +33,7 @@ train,00000043,gap_gt_split,HMM splits into segments; dt capped in features
 train,00000044,gap_gt_split,HMM splits into segments; dt capped in features
 train,00000046,low_1hz_fraction,irregular sampling; kept
 train,00000054,gap_gt_split,HMM splits into segments; dt capped in features
-train,00000054,gps_far_from_route,reference route unreliable; excluded from training
+train,00000054,gps_far_from_route,reference route unreliable; excluded from training (exclude_trips_train)
 train,00000055,gap_gt_split,HMM splits into segments; dt capped in features
 train,00000055,self_loops,kept; no reverse twin assigned
 train,00000062,gap_gt_split,HMM splits into segments; dt capped in features
