@@ -106,6 +106,10 @@ def anomalies(inv: pd.DataFrame, cfg: dict) -> pd.DataFrame:
             except (KeyError, TypeError):
                 hit = False
             if hit:
+                if name == "gps_far_from_route":
+                    excluded = r.partition == "train" and str(r.trip_id) in set(cfg.get("exclude_trips_train", []))
+                    decision = ("reference route unreliable; excluded from training (exclude_trips_train)" if excluded
+                                else "kept; far points get label -1 from the alignment (not in exclude_trips_train)")
                 out.append({"partition": r.partition, "trip_id": r.trip_id, "rule": name, "decision": decision})
     return pd.DataFrame(out, columns=["partition", "trip_id", "rule", "decision"])
 
