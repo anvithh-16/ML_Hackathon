@@ -205,9 +205,9 @@ bullets(s, ["Laptop 1: FastAPI loads artifacts/final/ (model + HMM config); GET 
 s = slide("Team status", "what is merged and what remains")
 table(s, [["Member", "Merged", "Remaining"],
           ["M1", "Data pipeline, labels, candidates, features, Logistic Regression, EDA, README, report §2 / §6", "Final PDF + deck, own-words pass on report text"],
-          ["M2", "Eval framework, KNN, Decision Tree, comparison, UI", "KNN / Decision Tree / UI report sections, rehearsal"],
-          ["M3", "Route metrics, Random Forest, HMM + experiments", "Random Forest + HMM report sections, viva notes, RF model file"],
-          ["M4", "Skeleton, interface, XGBoost, API, tuning + export", "XGBoost / BO / API report sections, freeze checks, public repo"]],
+          ["M2", "Eval framework, KNN, Decision Tree, comparison, UI", "Own-words pass on report sections; two-laptop rehearsal with M4"],
+          ["M3", "Route metrics, Random Forest, HMM + experiments", "Own-words pass on report sections; Random Forest model file"],
+          ["M4", "Skeleton, interface, XGBoost, API, tuning + export", "XGBoost / Bayesian-optimisation / API report sections, re-export final artifacts, rehearsal, freeze checks, public repo"]],
       0.6, 1.6, 12.1, col_w=[1.1, 6.4, 4.6], size=13, row_h=0.8)
 bullets(s, ["All code is on main via reviewed PRs; every report number is traceable to a file under results/"], y=6.0, w=12.1, h=0.8, size=16)
 
