@@ -9,11 +9,12 @@ from __future__ import annotations
 
 import argparse
 import json
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-from src.common.config import load_config, path_of
+from src.common.config import load_config, path_of, project_root
 from src.common.logging_utils import get_logger
 from src.data.loader import load_trip, trip_dir
 from src.eval.experiment_log import load_experiments
@@ -86,7 +87,7 @@ def main() -> None:
                      "Inference time (ms / 1k rows)": rec.get("infer_ms_per_1k"),
                      "Precision": rec.get("test.precision"), "Recall": rec.get("test.recall"),
                      "Training time (s)": rec.get("train_time_s"), "Candidate miss rate": rec.get("test.cand_miss_rate"),
-                     "CV Top-1": rec.get("cv.top1_mean"), "record": rec.get("_file")})
+                     "CV Top-1": rec.get("cv.top1_mean"), "record": Path(rec["_file"]).relative_to(project_root()).as_posix() if rec.get("_file") else None})
         if isinstance(rec.get("test.confusion"), list):
             conf[name] = np.array(rec["test.confusion"])
     table = pd.DataFrame(rows)
