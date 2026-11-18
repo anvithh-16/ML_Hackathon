@@ -1,0 +1,34 @@
+{
+ "name": "logreg",
+ "family": "linear",
+ "params": {
+  "C": 1.0,
+  "max_iter": 2000,
+  "solver": "lbfgs",
+  "class_weight": null
+ },
+ "seed": 42,
+ "calibration": "none",
+ "feature_version": "v1",
+ "feature_columns": [
+  "dist_m",
+  "dist_rank",
+  "dist_minus_min",
+  "heading_diff_deg",
+  "heading_valid",
+  "speed_mps",
+  "dt_prev_s",
+  "arc_length_m",
+  "proj_t",
+  "n_candidates",
+  "u_degree",
+  "v_degree",
+  "prev_obs_dist_same_arc",
+  "next_obs_dist_same_arc",
+  "reverse_exists"
+ ],
+ "train_time_s": 0.2948409160017036,
+ "n_train_rows": 558237,
+ "sklearn": "1.9.1",
+ "python": "3.14.0"
+}
