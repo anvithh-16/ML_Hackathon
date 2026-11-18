@@ -1,0 +1,39 @@
+{
+ "name": "xgb",
+ "family": "boosting",
+ "params": {
+  "n_estimators": 500,
+  "learning_rate": 0.010470628518852934,
+  "max_depth": 8,
+  "subsample": 0.6363374738662816,
+  "colsample_bytree": 0.8261185792308182,
+  "min_child_weight": 1.9264396655231053,
+  "reg_lambda": 2.454246042886291,
+  "tree_method": "hist",
+  "n_jobs": -1
+ },
+ "seed": 42,
+ "calibration": "none",
+ "feature_version": "v1",
+ "feature_columns": [
+  "dist_m",
+  "dist_rank",
+  "dist_minus_min",
+  "heading_diff_deg",
+  "heading_valid",
+  "speed_mps",
+  "dt_prev_s",
+  "arc_length_m",
+  "proj_t",
+  "n_candidates",
+  "u_degree",
+  "v_degree",
+  "prev_obs_dist_same_arc",
+  "next_obs_dist_same_arc",
+  "reverse_exists"
+ ],
+ "train_time_s": 3.9592711250006687,
+ "n_train_rows": 558237,
+ "sklearn": "1.7.2",
+ "python": "3.10.11"
+}

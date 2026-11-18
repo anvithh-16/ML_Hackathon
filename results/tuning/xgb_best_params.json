@@ -1,0 +1,19 @@
+{
+ "model": "xgb",
+ "objective": "cv_macro_f1_mean",
+ "best_value": 0.9157483697365769,
+ "untuned_value": 0.9134425792527162,
+ "n_trials": 40,
+ "synthetic": false,
+ "params": {
+  "n_estimators": 500,
+  "learning_rate": 0.010470628518852934,
+  "max_depth": 8,
+  "subsample": 0.6363374738662816,
+  "colsample_bytree": 0.8261185792308182,
+  "min_child_weight": 1.9264396655231053,
+  "reg_lambda": 2.454246042886291,
+  "tree_method": "hist",
+  "n_jobs": -1
+ }
+}
