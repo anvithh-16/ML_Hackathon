@@ -1,0 +1,68 @@
+partition,trip_id,rule,decision
+train,00000002,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000002,route_discontinuity,reference route has jumps; labels by alignment
+train,00000002,gps_far_from_route,reference route unreliable; excluded from training
+train,00000004,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000004,low_1hz_fraction,irregular sampling; kept
+train,00000006,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000011,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000013,self_loops,kept; no reverse twin assigned
+train,00000014,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000014,low_1hz_fraction,irregular sampling; kept
+train,00000018,low_1hz_fraction,irregular sampling; kept
+train,00000019,route_discontinuity,reference route has jumps; labels by alignment
+train,00000021,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000022,low_1hz_fraction,irregular sampling; kept
+train,00000024,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000024,self_loops,kept; no reverse twin assigned
+train,00000025,low_1hz_fraction,irregular sampling; kept
+train,00000026,low_1hz_fraction,irregular sampling; kept
+train,00000028,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000032,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000033,route_discontinuity,reference route has jumps; labels by alignment
+train,00000033,gps_far_from_route,reference route unreliable; excluded from training
+train,00000035,self_loops,kept; no reverse twin assigned
+train,00000037,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000038,self_loops,kept; no reverse twin assigned
+train,00000039,low_1hz_fraction,irregular sampling; kept
+train,00000041,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000041,route_discontinuity,reference route has jumps; labels by alignment
+train,00000042,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000042,route_discontinuity,reference route has jumps; labels by alignment
+train,00000043,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000044,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000046,low_1hz_fraction,irregular sampling; kept
+train,00000054,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000054,gps_far_from_route,reference route unreliable; excluded from training
+train,00000055,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000055,self_loops,kept; no reverse twin assigned
+train,00000062,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000069,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000069,route_discontinuity,reference route has jumps; labels by alignment
+train,00000070,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000071,low_1hz_fraction,irregular sampling; kept
+train,00000075,route_discontinuity,reference route has jumps; labels by alignment
+train,00000078,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000078,low_1hz_fraction,irregular sampling; kept
+train,00000079,self_loops,kept; no reverse twin assigned
+train,00000080,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000080,route_discontinuity,reference route has jumps; labels by alignment
+train,00000081,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000081,low_1hz_fraction,irregular sampling; kept
+train,00000084,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000084,self_loops,kept; no reverse twin assigned
+train,00000085,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000086,route_discontinuity,reference route has jumps; labels by alignment
+train,00000088,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000089,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000089,route_discontinuity,reference route has jumps; labels by alignment
+train,00000090,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000090,low_1hz_fraction,irregular sampling; kept
+train,00000098,gap_gt_split,HMM splits into segments; dt capped in features
+train,00000098,low_1hz_fraction,irregular sampling; kept
+train,00000099,self_loops,kept; no reverse twin assigned
+student_test,00000065,gap_gt_split,HMM splits into segments; dt capped in features
+student_test,00000076,gap_gt_split,HMM splits into segments; dt capped in features
+student_test,00000076,low_1hz_fraction,irregular sampling; kept
+student_test,00000076,route_discontinuity,reference route has jumps; labels by alignment
+student_test,00000091,self_loops,kept; no reverse twin assigned
