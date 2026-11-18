@@ -24,8 +24,10 @@ two visits are different positions, and the monotonic order assigns each GPS poi
 with a median aligned distance of 4.7 m (95th percentile 14.5 m), in line with the GPS noise in §2.3. Labelled
 observations: train 184 009 of 208 417, student_test 18 631 of 19 160.
 
-Trips flagged by the checker (< 95 % labelled or a non-monotonic restart), reviewed on the overlay maps in
-`results/labels/maps/align_<trip>.html`:
+Trips flagged by the checker (< 95 % labelled or a non-monotonic restart), reviewed on the interactive overlay maps in
+`results/labels/maps/align_<trip>.html` and on static overlays (`results/labels/figures/align_<partition>_<trip>.png`,
+made by `python -m eda.flagged_trips`). "Backward restarts" counts decreases of the aligned route position among
+labelled points only:
 
 | trip | labelled | median / p95 dist | backward restarts | decision |
 |---|---|---|---|---|
@@ -33,9 +35,9 @@ Trips flagged by the checker (< 95 % labelled or a non-monotonic restart), revie
 | train 00000033 | 41 % | 122 / 142 m | no | excluded from training |
 | train 00000002 | 88 % | 5.3 / 61 m | no | kept: two off-route stretches (552 and 311 points) get −1 |
 | train 00000043 | 93 % | 10.8 / 58 m | no | kept: two short off-route stretches |
-| train 00000066 | 90 % | 6.8 / 60 m | 5 | kept: a few small restarts |
-| train 00000081 | 79 % | 6.0 / 143 m | 138 | **to decide** — many restarts; only 517 of 778 route positions covered |
-| student_test 00000056 | 87 % | 5.7 / 134 m | 132 | kept (test trips are not removed); noted as a hard trip |
+| train 00000066 | 90 % | 6.8 / 60 m | 4 | kept: unlabelled points are short stretches near the start; labels are otherwise in route order |
+| train 00000081 | 79 % | 6.0 / 143 m | 15 | **kept**: the GPS leaves the reference route for one long stretch (label −1), and the vehicle ends by driving back past the start of the loop, so the last ~400 points align to early route positions; labels are in route order for the first ~2 800 points |
+| student_test 00000056 | 87 % | 5.7 / 134 m | 10 | kept (test trips are never removed); the track revisits the same streets, and parts of it leave the reference route (label −1); noted as a hard trip |
 
 ## Candidate generation
 
@@ -85,3 +87,9 @@ All columns are float32 and checked for NaN/inf (`tests/test_features.py`).
 - Cross-validation is grouped by **trip** (`configs/folds.json`, 5 folds of 16 trips), so no trip is in both the
   training and the validation folds.
 - student_test is used only for comparing models, never for training, tuning or threshold choice.
+
+### Figure: flagged-trip overlays
+Left: reference route (green), labelled GPS (blue), label −1 (red). Right: aligned route position against observation index.
+
+![train 00000081](../../../results/labels/figures/align_train_00000081.png)
+![student_test 00000056](../../../results/labels/figures/align_student_test_00000056.png)

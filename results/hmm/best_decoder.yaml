@@ -1,0 +1,8 @@
+emission_eps: 1.0e-06
+sigma_m: 5.0
+beta_m: 5.0
+uturn_penalty: 5.0
+dijkstra_limit_factor: 3.0
+dijkstra_limit_extra_m: 200
+decode_stride: 1
+max_candidates: 30

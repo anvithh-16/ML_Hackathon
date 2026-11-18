@@ -22,7 +22,7 @@ All maps are made by one function, `src/viz/folium_maps.trip_map`, so every map 
   trip (00000002, 00000033, 00000043, 00000054, 00000066, 00000081, student_test 00000056).
 - `results/hmm/maps/` — predicted vs reference route (from M3's `compare_hmm`, once merged).
 
-**Representative screenshots** *(insert in the PDF)*:
+**Representative static overlays (shown below and in §2.5):**
 1. `align_00000001.html` — a normal trip: labelled points sit on the reference route.
 2. `align_00000054.html` — the excluded trip: GPS and reference route visibly diverge (only 7.5 % of points labelled).
 3. A predicted-vs-reference route from `results/hmm/maps/`.

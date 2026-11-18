@@ -1,0 +1,114 @@
+{
+ "trip_id": "00000999",
+ "model_name": "SAMPLE - MOCK mini_trip fixture, not a result",
+ "model_variant": "mock",
+ "feature_version": "v1",
+ "n_obs": 14,
+ "n_segments": 2,
+ "gps_latlon": [
+  [
+   49.87002699,
+   8.65013938
+  ],
+  [
+   49.869982,
+   8.65041813
+  ],
+  [
+   49.870018,
+   8.65069688
+  ],
+  [
+   49.86997301,
+   8.65097563
+  ],
+  [
+   49.870009,
+   8.65125438
+  ],
+  [
+   49.87013497,
+   8.65142163
+  ],
+  [
+   49.87031494,
+   8.65136588
+  ],
+  [
+   49.87049491,
+   8.65143557
+  ],
+  [
+   49.87067487,
+   8.65135195
+  ],
+  [
+   49.87085484,
+   8.6514077
+  ],
+  [
+   49.87091783,
+   8.65167251
+  ],
+  [
+   49.87088183,
+   8.65195126
+  ],
+  [
+   49.87090883,
+   8.65223001
+  ],
+  [
+   49.8716197,
+   8.65264814
+  ]
+ ],
+ "predicted_route_latlon": [
+  [
+   [
+    49.87,
+    8.65
+   ],
+   [
+    49.87,
+    8.65139376
+   ],
+   [
+    49.87089983,
+    8.65139376
+   ]
+  ],
+  [
+   [
+    49.87089983,
+    8.65139376
+   ],
+   [
+    49.87089983,
+    8.65278752
+   ],
+   [
+    49.87089983,
+    8.65139376
+   ]
+  ]
+ ],
+ "metrics": {
+  "top1_accuracy_hmm": 1.0,
+  "top1_accuracy_classifier": 1.0,
+  "route_precision": 0.75,
+  "route_recall": 1.0,
+  "route_continuity_classifier": 1.0,
+  "route_continuity_hmm": 1.0,
+  "n_route_breaks": 1,
+  "candidate_miss_rate": 0.0,
+  "n_labelled_obs": 13,
+  "reference_available": true
+ },
+ "timings_s": {
+  "load_project_s": 0.016,
+  "candidates_s": 0.008,
+  "hmm_s": 0.007
+ },
+ "_note": "MOCK SAMPLE generated from tests/fixtures/mini_trip (synthetic 14-point trip) by the distance-only pipeline. Not a PathSnap result."
+}

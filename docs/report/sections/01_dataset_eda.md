@@ -78,4 +78,4 @@ Per trip (train + student_test): 262â€“19 313 observations (median 1 497), 299â€
 
 Folium maps with GPS track, road network (within 300 m of the track) and reference route, with legend and layer
 control: `results/eda/maps/train_00000001.html`, `train_00000041.html`, `train_00000090.html` (the 42-hour gap trip)
-and `student_test_00000000.html`. Screenshot: *(insert in the PDF)*.
+and `student_test_00000000.html`. The PDF shows static overlays of the same data (GPS, reference route, label status).
