@@ -1,0 +1,9 @@
+name: dtree
+family: tree
+params: {max_depth: 12, min_samples_leaf: 50, criterion: gini, max_features: null}
+calibration: none
+search_space:
+  max_depth: {type: int, low: 3, high: 30}
+  min_samples_leaf: {type: int, low: 1, high: 500, log: true}
+  criterion: {type: categorical, choices: [gini, entropy]}
+  max_features: {type: categorical, choices: ["null", sqrt]}

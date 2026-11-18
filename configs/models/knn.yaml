@@ -1,0 +1,8 @@
+name: knn
+family: instance-based
+params: {n_neighbors: 25, weights: distance, p: 2, algorithm: auto, n_jobs: -1}
+calibration: none
+search_space:
+  n_neighbors: {type: int, low: 5, high: 101, step: 2}
+  weights: {type: categorical, choices: [uniform, distance]}
+  p: {type: categorical, choices: [1, 2]}
