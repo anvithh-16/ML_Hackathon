@@ -45,7 +45,6 @@ python -m src.hmm.tune_decoder --scores <selected>__tuned --n-trips 20
 python -m src.eval.compare_hmm --models <selected>__tuned
 python -m src.export.export_artifacts --model <selected> --variant tuned --reason "<why>"
 python docs/report/build_report.py                              # docs/report/PathSnap_Technical_Report.pdf
-python docs/presentations/build_deck.py                          # docs/presentations/Review_2.pptx
 ```
 
 ## 4. Demo (two laptops)
