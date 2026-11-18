@@ -1,0 +1,4 @@
+# Replace @member1-github / @member4-github with real GitHub usernames.
+/src/common/            @member1-github @member4-github
+/configs/base.yaml      @member1-github @member4-github
+/configs/folds.json     @member1-github @member4-github

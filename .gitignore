@@ -1,0 +1,12 @@
+.venv/
+.venv-ui/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+data/raw/
+data/eval/
+data/processed/
+logs/
+results/scores/
+*.db
