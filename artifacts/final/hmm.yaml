@@ -2,7 +2,7 @@
 emission_eps: 1.0e-6
 sigma_m: 5.0                 # distance-only emission baseline (≈ measured median GPS-to-route distance)
 beta_m: 5.0                  # transition scale: log_t = -|network_dist - straight_dist| / beta_m
-uturn_penalty: 2.0           # subtracted (log space) when moving onto the reverse twin arc
+uturn_penalty: 5.0           # subtracted (log space) when moving onto the reverse twin arc
 dijkstra_limit_factor: 3.0   # search limit = factor * straight distance + extra
 dijkstra_limit_extra_m: 200
 decode_stride: 1             # decode every k-th point (k > 1 only for very long trips)
