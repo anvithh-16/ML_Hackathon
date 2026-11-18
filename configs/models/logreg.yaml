@@ -1,0 +1,7 @@
+name: logreg
+family: linear
+params: {C: 1.0, max_iter: 2000, solver: lbfgs, class_weight: null}
+calibration: none
+search_space:
+  C: {type: float, low: 0.001, high: 100.0, log: true}
+  class_weight: {type: categorical, choices: ["null", balanced]}
