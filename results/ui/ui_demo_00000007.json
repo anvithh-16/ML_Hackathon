@@ -1,0 +1,32 @@
+{
+ "trip_id": "00000007",
+ "model_name": "xgb",
+ "model_variant": "default",
+ "feature_version": "v1",
+ "n_obs": 1354,
+ "n_segments": 1,
+ "metrics": {
+  "top1_accuracy_hmm": 0.9933530280649926,
+  "top1_accuracy_classifier": 0.9534711964549483,
+  "route_precision": 0.983739837398374,
+  "route_recall": 0.983739837398374,
+  "route_continuity_classifier": 0.9963045084996305,
+  "route_continuity_hmm": 1.0,
+  "n_route_breaks": 0,
+  "candidate_miss_rate": 0.0,
+  "n_labelled_obs": 1354,
+  "reference_available": true
+ },
+ "timings_s": {
+  "load_project_s": 0.006474375000834698,
+  "candidates_s": 0.030155667000144604,
+  "features_s": 0.0032253749996016268,
+  "model_s": 0.004422041998623172,
+  "hmm_s": 0.09632437499931257,
+  "scoring_s": 0.035090208000838174,
+  "total_s": 0.17863770899930387
+ },
+ "n_gps_points_returned": 1354,
+ "n_route_polylines": 1,
+ "_note": "API response for the UI screenshot docs/report/screenshots/ui_2_result_00000007.png; student_test trip used as stand-in for an evaluator trip; polylines omitted; hmm settings = artifacts/final/hmm.yaml"
+}
