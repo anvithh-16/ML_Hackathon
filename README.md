@@ -36,6 +36,7 @@ python -m src.features.build_features --partition student_test
 python -m src.labels.check_alignment                             # label sanity checks + maps
 python -m src.candidates.generate --sweep                        # radius sweep (train)
 python -m eda.eda_plots && python -m eda.eda_maps                # EDA figures + Folium maps
+python -m eda.flagged_trips                                 # static overlays of the flagged trips
 for m in logreg knn dtree rforest xgb; do python -m src.eval.cv_runner --model $m --variant default --dump-scores; done
 python -m src.eval.compare_models                                # results/model_comparison.csv + figures
 python -m src.tuning.optuna_search --model <selected> --n-trials 40
@@ -43,6 +44,8 @@ python -m src.eval.cv_runner --model <selected> --variant tuned --params results
 python -m src.hmm.tune_decoder --scores <selected>__tuned --n-trips 20
 python -m src.eval.compare_hmm --models <selected>__tuned
 python -m src.export.export_artifacts --model <selected> --variant tuned --reason "<why>"
+python docs/report/build_report.py                              # docs/report/PathSnap_Technical_Report.pdf
+python docs/presentations/build_deck.py                          # docs/presentations/Review_2.pptx
 ```
 
 ## 4. Demo (two laptops)
